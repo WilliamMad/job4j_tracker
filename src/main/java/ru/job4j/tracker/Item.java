@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.time.LocalDateTime;
+
 public class Item {
     private int id;
     private String name;
@@ -20,15 +22,15 @@ public class Item {
         this.name = name;
     }
 
-    public void item() {
+    public Item() {
 
     }
 
-    public void item(String name) {
+    public Item(String name) {
         this.name = name;
     }
 
-    public void item(String name, int id) {
+    public Item(String name, int id) {
         this.name = name;
         this.id = id;
     }
