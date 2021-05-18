@@ -10,6 +10,7 @@ public class StartUI {
         System.out.println(tracker.findById(1));
         Item item = new Item("Anything", 2);
         System.out.println(item);
+        System.out.println(tracker.findByName("Something"));
     }
 }
 
