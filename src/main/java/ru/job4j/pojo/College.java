@@ -8,5 +8,8 @@ public class College {
         student.setFullName("Ivanov Ivan Ivanovich");
         student.setEducationBegan(new Date());
         student.setGroup(404);
+        System.out.println("ФИО студента: " + student.getFullName() + System.lineSeparator()
+        + "Группа: " + student.getGroup() + System.lineSeparator()
+        + "Дата начала обучения: " + student.getEducationBegan());
     }
 }
