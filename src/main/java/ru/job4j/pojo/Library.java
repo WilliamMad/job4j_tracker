@@ -11,8 +11,7 @@ public class Library {
         books[1] = book2;
         books[2] = book3;
         books[3] = book4;
-        for (int index = 0; index < books.length; index++) {
-            Book bcs = books[index];
+        for (Book bcs : books) {
             System.out.println("Название книги: " + bcs.getBookName() + System.lineSeparator()
                     + "Количество страниц: " + bcs.getPages());
         }
@@ -21,17 +20,15 @@ public class Library {
         System.out.println();
         books[0] = book4;
         books[3] = book1;
-        for (int index = 0; index < books.length; index++) {
-            Book bcs = books[index];
+        for (Book bcs : books) {
             System.out.println("Название книги: " + bcs.getBookName() + System.lineSeparator()
                     + "Количество страниц: " + bcs.getPages());
         }
         System.out.println();
         System.out.println("Show book with name \"Clean Code\" only");
         System.out.println();
-        for (int index = 0; index < books.length; index++) {
-            Book bcs = books[index];
-            if (bcs.getBookName().equals("Clean Code")) {
+        for (Book bcs : books) {
+            if ("Clean Code".equals(bcs.getBookName())) {
                 System.out.println("Название книги: " + bcs.getBookName() + System.lineSeparator()
                         + "Количество страниц: " + bcs.getPages());
             }
