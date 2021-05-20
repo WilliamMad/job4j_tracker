@@ -31,7 +31,7 @@ public class StartUI {
                 if (tracker.replace(id, newItem)) {
                     System.out.println("Item replaced");
                 } else {
-                    System.out.println("Error");
+                    System.out.println("Error, id not found");
                 }
             } else if (select == 3) {
                 System.out.println("=== Delete item ====");
@@ -40,7 +40,7 @@ public class StartUI {
                 if (tracker.delete(id)) {
                     System.out.println("Item deleted");
                 } else {
-                    System.out.println("Error");
+                    System.out.println("Error, id not found");
                 }
             } else if (select == 4) {
                 System.out.println("=== Find item by Id ====");
@@ -50,16 +50,19 @@ public class StartUI {
                 if (tracker.findById(id) != null) {
                     System.out.println("Item found");
                 } else {
-                    System.out.println("Error");
+                    System.out.println("Error, id not found");
                 }
             } else if (select == 5) {
                 System.out.println("=== Find items by name ====");
                 System.out.println("Enter name: ");
                 String name = scanner.nextLine();
-                if (name.length() > 0) {
-                    tracker.findByName(name);
+                Item[] names = tracker.findByName(name);
+                if (names.length > 0) {
+                    for (Item index: names) {
+                        System.out.println(index);
+                    }
                 } else {
-                    System.out.println("Name not found");
+                    System.out.println("Error, name not found");
                 }
             } else if (select == 6) {
                 run = false;
