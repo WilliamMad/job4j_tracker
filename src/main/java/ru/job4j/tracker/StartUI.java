@@ -19,7 +19,10 @@ public class StartUI {
                 tracker.add(item);
                 } else if (select == 1) {
                 System.out.println("=== Show all items ====");
-                tracker.findAll();
+                Item[] items = tracker.findAll();
+                for (Item index: items) {
+                    System.out.println(index);
+                }
             } else if (select == 2) {
                 System.out.println("=== Edit item ====");
                 System.out.println("Enter id: ");
@@ -27,7 +30,6 @@ public class StartUI {
                 System.out.println("Enter new name: ");
                 String name = scanner.nextLine();
                 Item newItem = new Item(name);
-                tracker.replace(id, newItem);
                 if (tracker.replace(id, newItem)) {
                     System.out.println("Item replaced");
                 } else {
@@ -36,7 +38,6 @@ public class StartUI {
             } else if (select == 3) {
                 System.out.println("=== Delete item ====");
                 int id = Integer.valueOf(scanner.nextLine());
-                tracker.delete(id);
                 if (tracker.delete(id)) {
                     System.out.println("Item deleted");
                 } else {
@@ -46,9 +47,9 @@ public class StartUI {
                 System.out.println("=== Find item by Id ====");
                 System.out.println("Enter id: ");
                 int id = Integer.valueOf(scanner.nextLine());
-                tracker.findById(id);
-                if (tracker.findById(id) != null) {
-                    System.out.println("Item found");
+                Item findId = tracker.findById(id);
+                if (findId != null) {
+                    System.out.println("Item found: " + findId);
                 } else {
                     System.out.println("Error, id not found");
                 }
@@ -71,7 +72,7 @@ public class StartUI {
     }
 
     private void showMenu() {
-        System.out.println("Menu. Select:");
+        System.out.println("Menu.");
         System.out.println("0. Add new Item");
         System.out.println("1. Show all items");
         System.out.println("2. Edit item");
