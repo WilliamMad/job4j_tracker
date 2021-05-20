@@ -1,9 +1,9 @@
 package ru.job4j.ru.job4j.poly;
 
 public interface Transport {
-    String drive();
+    void drive();
 
-    String passengers(String number);
+    void passengers(String number);
 
-    String refuel(String liters, String price);
+    int refuel(int liters, int price);
 }
