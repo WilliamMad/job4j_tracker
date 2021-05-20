@@ -1,23 +1,24 @@
-package ru.job4j.ru.job4j.poly;
+package ru.job4j.poly;
 
 import java.util.Scanner;
 
 public class Bus implements Transport {
     @Override
     public void drive() {
-
+        System.out.println("Еду");
     }
 
     @Override
-    public void passengers(String number) {
+    public void passengers(int number) {
         Scanner sc = new Scanner(System.in);
-        number = sc.nextLine();
+        number = sc.nextInt();
     }
 
     @Override
-    public int refuel(int liters, int price) {
+    public int refuel(int liters) {
         Scanner sc = new Scanner(System.in);
         liters = sc.nextInt();
-        return price * liters;
+        int price = 50;
+        return liters * price;
     }
 }
