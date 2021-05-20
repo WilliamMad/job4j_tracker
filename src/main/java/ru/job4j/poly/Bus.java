@@ -15,8 +15,6 @@ public class Bus implements Transport {
 
     @Override
     public int refuel(int liters) {
-        Scanner sc = new Scanner(System.in);
-        liters = sc.nextInt();
         int price = 50;
         return liters * price;
     }
