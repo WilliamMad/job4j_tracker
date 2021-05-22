@@ -102,8 +102,9 @@ public class StartUITest {
                 new Exit(out)
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(out.toString(), is("=== Find by name ====" + System.lineSeparator() +
-                item + System.lineSeparator()));
+        assertThat(out.toString(), is("Menu." + System.lineSeparator() + "0. Find item by name" + System.lineSeparator()
+                + "1. Exit" + System.lineSeparator() + "=== Find by name ====" + System.lineSeparator() + item + System.lineSeparator() + "Menu."
+                + System.lineSeparator() + "0. Find item by name" + System.lineSeparator() + "1. Exit" + System.lineSeparator()));
     }
 
     @Test
