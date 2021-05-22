@@ -14,7 +14,6 @@ public class Exit implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        out.println("Menu." + System.lineSeparator() + "0. Exit");
         return false;
     }
 }
