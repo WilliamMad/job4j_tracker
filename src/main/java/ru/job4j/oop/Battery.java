@@ -7,7 +7,7 @@ public class Battery {
         this.load = charge;
     }
 
-    public void exchange(Battery another){
+    public void exchange(Battery another) {
         another.load = another.load + this.load;
         this.load = 0;
     }
