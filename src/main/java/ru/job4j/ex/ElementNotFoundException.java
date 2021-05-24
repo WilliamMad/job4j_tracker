@@ -8,7 +8,7 @@ public class ElementNotFoundException extends Exception {
     public static class FindEl {
             public static int indexOf(String[] value, String key) throws ElementNotFoundException {
                 for (int i = 0; i < value.length; i++) {
-                    if (key.equalsIgnoreCase(value[i])) {
+                    if (key.equals(value[i])) {
                         return i;
                     }
                 }
