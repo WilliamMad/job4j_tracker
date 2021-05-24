@@ -11,18 +11,18 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if ((!user.isValid()) || (user.getUsername().length() < 3)) {
+        if ((user.getUsername().length() < 3) || !(user.isValid())) {
             throw new UserInvalidException("User is not valid");
         }
         return true;
     }
 
-    public static void main(String[] args) throws UserNotFoundException {
+    public static void main(String[] args) {
             User[] users = {
-                new User("Petr Arsentev", true)
+                new User("Ki", true)
         };
         try {
-            User user = findUser(users, "Petr Arsentev");
+            User user = findUser(users, "Ki");
                 if (validate(user)) {
                     System.out.println("This user has an access");
                 }
