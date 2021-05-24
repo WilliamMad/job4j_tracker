@@ -31,6 +31,19 @@ public class UserStore {
             } catch (UserNotFoundException unf) {
             System.out.println("User not found");
             }
+        User[] testUsers = {
+                new User("Ivan Ivanov", true)
+        };
+        try {
+            User user = findUser(users, "Ivan Petrov");
+            if (validate(user)) {
+                System.out.println("This user has an access");
+            }
+        } catch (UserInvalidException uie) {
+            System.out.println("Invalid user.");
+        } catch (UserNotFoundException unf) {
+            System.out.println("User not found");
+        }
         }
     }
 
