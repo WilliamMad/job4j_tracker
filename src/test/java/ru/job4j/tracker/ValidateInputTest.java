@@ -66,7 +66,7 @@ public class ValidateInputTest {
         assertThat(selected, is(2));
     }
 
-    @Test (expected = ArrayIndexOutOfBoundsException.class)
+    @Test
     public void whenNegativeInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
@@ -74,5 +74,6 @@ public class ValidateInputTest {
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
+        assertThat(selected, is(-4));
     }
 }
