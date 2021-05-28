@@ -16,8 +16,6 @@ public class PhoneDictionary {
             || index.getAddress().equals(key) || index.getSurname().equals(key)) {
                 result.add(index);
                 System.out.println(index);
-            } else {
-                System.out.println("Not found");
             }
         }
         return result;
