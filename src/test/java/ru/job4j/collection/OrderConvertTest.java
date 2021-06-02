@@ -22,9 +22,9 @@ public class OrderConvertTest {
     public void whenDuplicateOrder() {
         List<Order> orders = new ArrayList<>();
         orders.add(new Order("3sfe", "Dress"));
-        orders.add(new Order("3sfe", "Jeans"));
-        orders.add(new Order("4sfe", "T-shirt"));
+        orders.add(new Order("3sfe", "Dress"));
+        orders.add(new Order("4sfe", "Jeans"));
         HashMap<String, Order> map = OrderConvert.process(orders);
-        assertThat(map.get("3sfe"), is(new Order("3sfe", "Jeans")));
+        assertThat(map.size(), is(2));
     }
 }
