@@ -7,6 +7,8 @@ public class Item {
     private int id;
     private String name;
     private LocalDateTime created = LocalDateTime.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private String formatDateTime = created.format(formatter);
 
     public Item() { }
 
@@ -19,8 +21,8 @@ public class Item {
         this.id = id;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
+    public String getCreated() {
+        return formatDateTime;
     }
 
     public int getId() {
@@ -44,7 +46,7 @@ public class Item {
         return "Item{"
                + "id=" + id
                + ", name='" + name + '\''
-               + ", created=" + created
+               + ", created=" + formatDateTime
                + '}';
     }
 }
