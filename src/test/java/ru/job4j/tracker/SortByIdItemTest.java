@@ -35,8 +35,8 @@ public class SortByIdItemTest {
         Item item3 = new Item("A");
         item3.setId(3);
         List<Item> items = Arrays.asList(item2, item1, item3);
-        Collections.sort(items, new SortByIdItem());
-        List<Item> expected = Arrays.asList(item1, item2, item3);
+        Collections.sort(items, new SortByIdItemReverse());
+        List<Item> expected = Arrays.asList(item3, item2, item1);
         assertThat(items, is(expected));
     }
 }
