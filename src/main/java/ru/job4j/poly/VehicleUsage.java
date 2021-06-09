@@ -2,7 +2,7 @@ package ru.job4j.poly;
 
 public class VehicleUsage {
     public static void main(String[] args) {
-        Vehicle bus = new Bus();
+        Vehicle bus = (Vehicle) new Bus();
         Vehicle train = new Train();
         Vehicle plain = new Plain();
 
