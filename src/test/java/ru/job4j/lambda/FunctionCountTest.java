@@ -26,8 +26,8 @@ public class FunctionCountTest {
 
     @Test
     public void whenExpoFunctionThenExpoResults() {
-        List<Double> result = FunctionCount.diapason(1, 4, x -> 2 * Math.pow(x, x) + 1);
-        List<Double> expected = Arrays.asList(3D, 9D, 55D);
+        List<Double> result = FunctionCount.diapason(1, 4, x -> 2 * Math.pow(2, x) + 1);
+        List<Double> expected = Arrays.asList(5D, 9D, 17D);
         assertThat(result, is(expected));
     }
 }
