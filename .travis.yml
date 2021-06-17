@@ -18,3 +18,8 @@ notifications:
       - gleb.lipai@yandex.ru
     on_success: never # default: change
     on_failure: always # default: always
+    env:
+
+      global:
+
+        - CODECOV_TOKEN="3529b8c8-abe3-40a2-bcd6-114ff903d554"
