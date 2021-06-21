@@ -5,7 +5,11 @@ import java.util.Objects;
 public class Profile {
     private Address address;
 
-    private Profile() { }
+    public static Profile of(Address adrs) {
+        Profile pr = new Profile();
+        pr.address = adrs;
+        return pr;
+    }
 
     public Address getAddress() {
         return address;
