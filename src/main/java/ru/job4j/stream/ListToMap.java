@@ -7,10 +7,9 @@ import java.util.stream.Collectors;
 
 public class ListToMap {
     public Map<String, Student> studentMap(List<Student> studentList) {
-        Map<String, Student> studentMap = studentList.stream()
+        return studentList.stream()
                 .collect(Collectors.toMap(Student::getSurname,
-                        Function.identity(),
+                        student -> student,
                         (existing, replacement) -> existing));
-        return studentMap;
     }
 }
