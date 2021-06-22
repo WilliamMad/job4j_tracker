@@ -21,8 +21,8 @@ public class ListToMapTest {
                 new Student(1, "Ivan"));
         Map<String, Student> rsl = new ListToMap().studentMap(studentList);
         Map<String, Student> expected = new HashMap<>();
-        expected.put(new Student(1, "Ivan"));
-        expected.put(new Student(2, "Petr"));
+        expected.put("Ivan", new Student(1, "Ivan"));
+        expected.put("Petr", new Student(2, "Petr"));
         assertThat(rsl, is(expected));
     }
 }
