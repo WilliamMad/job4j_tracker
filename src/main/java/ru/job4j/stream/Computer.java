@@ -11,12 +11,18 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer:" + '\n'
-                + "Computer Name = " + computerName + '\n'
-                + "CPU = " + cpu + '\n'
-                + "Motherboard = " + motherboard + '\n'
-                + "Video Card = " + videoCard + '\n'
-                + "Hard Disc = " + hardDisc + '\n'
+        return "Computer:"
+                + System.lineSeparator()
+                + "Computer Name = " + computerName
+                + System.lineSeparator()
+                + "CPU = " + cpu
+                + System.lineSeparator()
+                + "Motherboard = " + motherboard
+                + System.lineSeparator()
+                + "Video Card = " + videoCard
+                + System.lineSeparator()
+                + "Hard Disc = " + hardDisc
+                + System.lineSeparator()
                 + "RAM (GB) = " + ram;
     }
 
