@@ -21,9 +21,7 @@ public class BankService {
      * @param user пользователь
      */
     public void addUser(User user) {
-        if (!users.containsKey(user)) {
-            users.put(user, new ArrayList<>());
-        }
+            users.putIfAbsent(user, new ArrayList<>());
     }
 
     /**
